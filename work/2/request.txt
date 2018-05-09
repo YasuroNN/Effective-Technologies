@@ -1,0 +1,1 @@
+SELECT autor_name FROM autors WHERE autor_id IN (SELECT autor_id FROM book_autor GROUP BY autor_id HAVING NOT COUNT(*) > 7);
